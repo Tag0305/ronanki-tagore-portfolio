@@ -59,6 +59,26 @@ export interface SkillCategory {
   skills: string[]
 }
 
+export interface TechStackItem {
+  technology: string
+  purpose: string
+}
+
+export interface TechStackCategory {
+  id: string
+  title: string
+  description: string
+  items: TechStackItem[]
+}
+
+export interface TechDesignStackData {
+  title: string
+  description: string
+  positioning: string
+  note: string
+  categories: TechStackCategory[]
+}
+
 export const portfolioData = {
   personalInfo: {
     name: "Ronanki Tagore",
@@ -231,5 +251,112 @@ export const portfolioData = {
       issuer: "NPTEL",
       status: "Completed"
     }
-  ]
+  ],
+  techDesignStack: {
+    title: "Premium Portfolio — Tech & Design Stack",
+    subtitle: "A modern, interactive portfolio experience focused on premium visual design, smooth motion, responsive development, and high-performance delivery.",
+    positioning: "Premium personal portfolio development — combining strong visual design, immersive 3D presentation, smooth motion, responsive UX, and modern frontend engineering to create a memorable digital first impression.",
+    note: "This document describes the visible technologies and design capabilities. Implementation-specific production techniques are intentionally not disclosed.",
+    categories: [
+      {
+        id: "frontend",
+        title: "Frontend Development",
+        description: "Component architecture, scalable logic & design systems",
+        items: [
+          {
+            technology: "React",
+            purpose: "Component-based UI architecture and interactive portfolio sections."
+          },
+          {
+            technology: "JavaScript / TypeScript",
+            purpose: "Application logic, interactions, and maintainable frontend structure."
+          },
+          {
+            technology: "HTML5 & CSS3",
+            purpose: "Semantic structure, responsive layouts, and polished visual styling."
+          },
+          {
+            technology: "Tailwind CSS",
+            purpose: "Fast, consistent, responsive UI development and design-system styling."
+          }
+        ]
+      },
+      {
+        id: "motion",
+        title: "Motion & Interaction",
+        description: "Cinematic scroll and micro-interaction engineering",
+        items: [
+          {
+            technology: "GSAP",
+            purpose: "Smooth, cinematic scroll animations, transitions, and interactive motion."
+          },
+          {
+            technology: "Scroll-driven animation",
+            purpose: "Interactive storytelling that responds naturally to user scrolling."
+          },
+          {
+            technology: "Micro-interactions",
+            purpose: "Subtle motion details that make the interface feel refined and responsive."
+          }
+        ]
+      },
+      {
+        id: "3d",
+        title: "3D & Immersive Design",
+        description: "Dimensional interfaces, spatial depth & rotational visuals",
+        items: [
+          {
+            technology: "3D visual design",
+            purpose: "Large-scale immersive hero visuals designed to create an immediate premium impression."
+          },
+          {
+            technology: "360° interactive presentation",
+            purpose: "A complete rotational visual experience integrated into the hero section."
+          },
+          {
+            technology: "Depth & perspective",
+            purpose: "Layered composition and perspective-based motion for a more dimensional interface."
+          }
+        ]
+      },
+      {
+        id: "uiux",
+        title: "UI / UX Design",
+        description: "Design systems, layout hierarchy & responsive ergonomics",
+        items: [
+          {
+            technology: "Figma",
+            purpose: "Interface planning, visual systems, layouts, prototypes, and responsive design."
+          },
+          {
+            technology: "Design systems",
+            purpose: "Consistent typography, spacing, components, and visual hierarchy."
+          },
+          {
+            technology: "Responsive UX",
+            purpose: "Layouts and interactions optimized across desktop, tablet, and mobile."
+          }
+        ]
+      },
+      {
+        id: "performance",
+        title: "Performance & Delivery",
+        description: "Production pipelines, speed & asset optimization",
+        items: [
+          {
+            technology: "Modern responsive architecture",
+            purpose: "Built for fast rendering and smooth interaction across screen sizes."
+          },
+          {
+            technology: "Asset optimization",
+            purpose: "Visual assets prepared with performance and loading experience in mind."
+          },
+          {
+            technology: "Production-ready workflow",
+            purpose: "Structured development approach for maintainable portfolio projects."
+          }
+        ]
+      }
+    ]
+  }
 }

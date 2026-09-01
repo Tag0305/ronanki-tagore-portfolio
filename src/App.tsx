@@ -4,6 +4,7 @@ import { HeroSection } from "./components/creator/HeroSection"
 import { AboutSection } from "./components/creator/AboutSection"
 import { ProjectsSection } from "./components/creator/ProjectsSection"
 import { CoreExpertiseSection } from "./components/creator/CoreExpertiseSection"
+import { TechStackSection } from "./components/creator/TechStackSection"
 import { ExperienceSection } from "./components/experience/ExperienceSection"
 import { Career } from "./components/portfolio3d/Career"
 import { Contact } from "./components/portfolio3d/Contact"
@@ -41,7 +42,10 @@ export default function App() {
         {/* 5. CORE EXPERTISE SECTION */}
         <CoreExpertiseSection />
 
-        {/* 6. PROFESSIONAL EXPERIENCE */}
+        {/* 6. TECH & DESIGN STACK SECTION */}
+        <TechStackSection />
+
+        {/* 7. PROFESSIONAL EXPERIENCE */}
         <ExperienceSection />
 
         {/* 7. ACADEMIC TIMELINE & CERTIFICATIONS */}

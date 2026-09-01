@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
   { label: "Expertise", id: "expertise" },
+  { label: "Stack", id: "tech-stack" },
   { label: "Experience", id: "experience" },
   { label: "Education", id: "career" },
   { label: "Contact", id: "contact" },
