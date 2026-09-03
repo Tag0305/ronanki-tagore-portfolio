@@ -48,14 +48,14 @@ const projectsData: ProjectItem[] = [
   },
   {
     num: "03",
-    category: "Python & Machine Learning",
-    name: "Customer Churn Analytics & Predictive Modeling",
-    technology: ["Python", "Pandas", "Scikit-Learn", "Seaborn"],
-    problem: "A subscription business faced customer churn without knowing which operational metrics or contract terms were driving cancellations.",
-    approach: "Performed EDA on a 1,000-customer dataset, engineered domain features, and compared Logistic Regression and Random Forest models.",
-    result: "Achieved 88.0% prediction accuracy and identified contract terms and subscription tenure as top retention indicators.",
+    category: "Python, ML & Streamlit",
+    name: "AI Anomaly Analyst",
+    technology: ["Python", "Pandas", "Scikit-Learn", "Streamlit", "Pytest", "GitHub Actions"],
+    problem: "Identifying subtle anomalies, operational outliers, and risk patterns across multi-dimensional business datasets requires an automated, interpretable detection workflow.",
+    approach: "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations with an interactive Streamlit dashboard, CSV upload/export, Pytest validation, and GitHub Actions CI.",
+    result: "Delivered an automated anomaly scoring system identifying unusual records and highlighting top contributing risk features.",
     isPrivate: false,
-    githubUrl: "https://github.com/Tag0305/python-customer-churn-prediction"
+    githubUrl: "https://github.com/Tag0305/ai-anomaly-agent"
   },
   {
     num: "04",

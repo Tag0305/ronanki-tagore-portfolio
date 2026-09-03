@@ -95,130 +95,138 @@ export const portfolioData = {
     github: "https://github.com/Tag0305",
     linkedin: "https://linkedin.com/in/tagoreronanki",
     portfolio: "https://data-analyst-resume-portfolio.vercel.app",
-    summary: "I am an Electronics and Communication Engineering student at IIIT Manipur with hands-on experience in SQL, Python, business analytics, predictive modelling and data pipeline development. Currently working as a Freelance AI Evaluation & Benchmark Developer with Airdawgs, having completed Project Terminus and currently working on Project Sentinel."
+    summary: "I am an Electronics and Communication Engineering student at IIIT Manipur with hands-on experience in SQL, Python, machine learning, business analytics, and cloud data pipelines. Currently working as a Freelance AI Evaluation & Benchmark Developer with Airdawgs, focusing on Project Terminus Edition 2 and deterministic evaluation of coding agents."
   },
   experience: [
     {
-      title: "Freelance AI Evaluation & Benchmark Developer",
-      company: "Airdawgs · Freelance",
+      title: "AI Benchmark & Evaluation Developer – Freelance",
+      company: "Airdawgs – AI/LLM Evaluation & Benchmarking",
       period: "July 2026 – Present",
       projects: [
         {
-          name: "PROJECT TERMINUS",
-          status: "COMPLETED",
-          description: "Worked on AI benchmark task authoring, evaluation, validation, and technical quality assurance for coding and machine-learning tasks.",
+          name: "PROJECT TERMINUS EDITION 2",
+          status: "CURRENT",
+          description: "Evaluating and benchmarking advanced Large Language Models (LLMs) and AI agents across real-world software engineering tasks, with emphasis on reasoning quality, instruction following, code reliability, execution accuracy, and reproducibility.",
           responsibilities: [
-            "Created and reviewed deterministic technical benchmark tasks",
-            "Worked with Docker-based execution environments and automated test suites",
-            "Developed and validated oracle solutions and scoring rubrics",
-            "Tested edge cases, invalid inputs, recovery behavior, and reproducibility",
-            "Debugged verifier, runtime, Docker, packaging, and task-quality issues",
-            "Reviewed task difficulty and ensured requirements were clearly specified",
-            "Worked with Python, Go, Java, Bash, Docker, Linux, Git, and automated testing workflows"
+            "Evaluated and benchmarked advanced Large Language Models (LLMs) and AI agents across real-world software engineering tasks, focusing on reasoning quality, instruction following, code reliability, execution accuracy, and reproducibility.",
+            "Designed challenging benchmark tasks with detailed technical specifications, reference/oracle solutions, deterministic evaluation criteria, automated test suites, and structured scoring workflows.",
+            "Built reproducible Docker/Linux environments with pinned dependencies and deterministic validation pipelines for consistent model evaluation.",
+            "Analyzed AI-generated solutions to identify reasoning failures, edge cases, invalid inputs, state inconsistencies, and non-generalizable behavior.",
+            "Diagnosed benchmark and execution failures across Python, Go, Java, Bash, Git, Docker, and Linux environments using automated and oracle-based validation.",
+            "Incorporated reviewer feedback to improve benchmark fairness, difficulty, reproducibility, and resistance to hardcoded solutions."
           ]
         },
         {
           name: "PROJECT SENTINEL",
-          status: "CURRENT",
-          description: "Currently working on technical AI evaluation and coding-task review, focusing on task validity, test coverage, instruction quality, and reliable model evaluation.",
+          status: "COMPLETED",
+          description: "Technical AI evaluation and coding-task review, focusing on task validity, test coverage, instruction quality, and reliable model evaluation.",
           responsibilities: [
-            "Review technical coding and machine-learning tasks for correctness and validity",
-            "Evaluate whether task requirements are properly covered by tests",
-            "Check whether tested behavior is clearly documented in task instructions",
-            "Review fail-to-pass tests and regression protection",
-            "Review oracle solutions against the documented requirements",
-            "Evaluate task difficulty and technical edge cases",
-            "Identify overly prescriptive instructions or accidental solution leakage",
-            "Improve task specifications while preserving fairness and intended scope",
-            "Review implementation dependencies, edge cases, and validation behavior"
+            "Reviewed technical coding and machine-learning tasks for correctness and validity.",
+            "Evaluated whether task requirements were properly covered by tests and regression protection.",
+            "Checked whether tested behavior was clearly documented in task instructions without accidental solution leakage.",
+            "Reviewed oracle solutions against documented requirements and technical edge cases.",
+            "Improved task specifications while preserving fairness, difficulty, and intended evaluation scope."
           ]
         }
       ],
-      technologies: ["Python", "Docker", "Go", "Java", "Bash", "Linux", "Git", "Project Terminus", "Project Sentinel", "AI Benchmark Evaluation", "Oracle Verification", "Automated Testing"]
+      technologies: ["Python", "Docker", "Linux", "Git", "GitHub", "GitHub Actions", "Pytest", "Go", "Java", "Bash", "Project Terminus Edition 2", "Project Sentinel", "AI Benchmark Evaluation", "Oracle Verification", "Automated Testing"]
     }
   ],
   skills: {
     programming: ["Python", "SQL (PostgreSQL, SQLite, MySQL)", "HTML/CSS"],
-    libraries: ["Pandas", "NumPy", "Scikit-Learn", "Seaborn", "Matplotlib", "NLTK"],
-    bi: ["Power BI", "Tableau", "Excel (Pivot Tables, VLOOKUP)"],
-    tools: ["Git", "GitHub", "pgAdmin", "Jupyter Notebooks", "VS Code", "Docker", "Linux"],
+    libraries: ["Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "Seaborn", "Streamlit", "NLTK"],
+    aiEvaluation: [
+      "LLM Evaluation",
+      "AI Agent Evaluation",
+      "Benchmark Authoring",
+      "Reference/Oracle Solutions",
+      "Evaluation Criteria",
+      "Failure Analysis"
+    ],
+    bi: ["Power BI", "Tableau", "Excel"],
+    tools: ["Docker", "Linux", "Git", "GitHub", "GitHub Actions", "Pytest", "BigQuery", "Power BI", "Tableau", "Excel", "Jupyter Notebooks", "VS Code"],
     concepts: [
       "Relational Database Design",
-      "ETL/ELT Pipeline Automation",
+      "ETL/ELT Pipelines",
+      "API Integration",
       "Cohort Retention Analysis",
-      "Customer Lifetime Value (CLV)",
-      "Predictive Modeling",
       "Data Wrangling & Cleaning",
-      "Descriptive & Statistical Analysis",
-      "Deterministic AI Benchmarking"
+      "Predictive Modeling",
+      "Statistical Analysis"
     ]
   },
   projects: [
     {
-      title: "SQL E-Commerce Business Analytics",
-      category: "PostgreSQL & SQL Analytics",
-      problem: "Unstructured e-commerce transaction histories required quantitative analysis to identify high-value customer segments, calculate retention, and pinpoint products driving repeat purchases.",
-      approach: "Designed and loaded a multi-table relational database with custom constraints. Applied advanced SQL techniques including CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins.",
-      result: "Identified product categories with >40% repeat purchase rates to support marketing and inventory decisions.",
-      technologies: ["PostgreSQL", "SQL", "CTEs", "Window Functions", "Schema Design"],
-      githubUrl: "https://github.com/Tag0305/sql-ecommerce-analytics",
+      title: "AI Anomaly Analyst",
+      category: "Python & Machine Learning",
+      problem: "Detecting unusual records and subtle risk patterns across multi-dimensional business datasets requires an automated, interpretable anomaly detection application.",
+      approach: "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations. Implemented data preprocessing and anomaly scoring to identify unusual records and highlight the strongest contributing feature for each detected anomaly. Developed an interactive Streamlit dashboard with CSV upload/export, analyst-friendly summaries, Pytest validation, and GitHub Actions CI for reproducible analysis.",
+      result: "Delivered an interactive Streamlit dashboard providing automated severity scoring, anomaly flagging, and CI-tested reproducible execution.",
+      technologies: ["Python", "Pandas", "Scikit-Learn", "Streamlit", "Pytest", "GitHub Actions"],
+      githubUrl: "https://github.com/Tag0305/ai-anomaly-agent",
       detailedPoints: [
-        "Designed and loaded a multi-table PostgreSQL database simulating e-commerce transaction histories with custom constraints.",
-        "Optimized SQL queries using CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention.",
-        "Identified product categories with 40%+ repeat purchase rates to support marketing and inventory decisions through business KPI models."
+        "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations.",
+        "Implemented data preprocessing and anomaly scoring to identify unusual records and highlight the strongest contributing feature for each detected anomaly.",
+        "Developed an interactive Streamlit dashboard with CSV upload/export, analyst-friendly summaries, Pytest validation, and GitHub Actions CI for reproducible analysis."
       ]
     },
     {
-      title: "Customer Churn Analytics & Predictive Modeling",
-      category: "Python & Machine Learning",
-      problem: "A subscription business faced customer churn without knowing which operational metrics or contract terms were driving cancellations.",
-      approach: "Preprocessed a 1,000-customer dataset, conducted thorough exploratory data analysis (EDA), engineered domain features, and evaluated machine learning classifiers.",
-      result: "Achieved 88.0% prediction accuracy with Random Forest and identified contract length & tenure as top retention indicators.",
-      technologies: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Matplotlib"],
-      githubUrl: "https://github.com/Tag0305/python-customer-churn-prediction",
+      title: "SQL E-Commerce Business Analytics",
+      category: "PostgreSQL & SQL Analytics",
+      problem: "Unstructured e-commerce transaction histories required quantitative analysis to track customer purchasing behavior, repeat purchases, product performance, and retention trends.",
+      approach: "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention.",
+      result: "Identified product categories with 40%+ repeat purchase rates and translated query results into marketing and inventory KPI insights.",
+      technologies: ["PostgreSQL", "SQL", "CTEs", "Window Functions"],
+      githubUrl: "https://github.com/Tag0305/sql-ecommerce-analytics",
       detailedPoints: [
-        "Performed exploratory data analysis on a 1,000-customer dataset to identify patterns associated with customer cancellations.",
-        "Engineered and scaled features, then compared Logistic Regression and Random Forest models to achieve 88.0% prediction accuracy.",
-        "Analyzed feature importance and found contract terms and subscription tenure to be the strongest retention indicators."
+        "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention.",
+        "Created analytical queries to track customer purchasing behavior, repeat purchases, product performance, and retention trends across transaction data.",
+        "Identified product categories with 40%+ repeat purchase rates and translated query results into marketing and inventory KPI insights."
       ]
     },
     {
       title: "End-to-End Cloud Data Pipeline Simulation",
       category: "Python & Data Engineering",
-      problem: "Manual market data collection was prone to errors, lacking real-time stream ingestion, automated transformations, and structured staging.",
-      approach: "Developed an automated Python ingestion script that fetches market asset data via REST APIs, streams it to a local warehouse, and executes dbt-style SQL CTE transformations.",
-      result: "Automated ingestion of live asset records, calculating volume-to-market-cap ratios and generating automated report outputs.",
+      problem: "Manual market data collection was prone to errors, lacking automated stream ingestion and structured analytical warehouse staging.",
+      approach: "Built an automated Python pipeline to ingest market asset data through an external API and load it into a SQLite/BigQuery-style analytical warehouse. Applied dbt-style CTE transformations for data cleaning, structuring, and analysis to prepare reliable datasets for downstream reporting.",
+      result: "Developed an automated reporting workflow to generate updated market metrics and present processed data for analytical monitoring.",
       technologies: ["Python", "SQLite", "BigQuery", "SQL", "dbt-style CTEs"],
       githubUrl: "https://github.com/Tag0305/cloud-data-pipeline-simulation",
       detailedPoints: [
-        "Built an automated Python pipeline to ingest real-time market asset data through an API.",
-        "Loaded data into a SQLite/BigQuery-style warehouse and applied dbt-style CTE transformations for cleaning, partitioning, and market analysis.",
-        "Developed an automated reporting dashboard script to present live data metrics."
+        "Built an automated Python pipeline to ingest market asset data through an external API and load it into a SQLite/BigQuery-style analytical warehouse.",
+        "Applied dbt-style CTE transformations for data cleaning, structuring, and analysis to prepare reliable datasets for downstream reporting.",
+        "Developed an automated reporting workflow to generate updated market metrics and present processed data for analytical monitoring."
       ]
     }
   ],
   education: [
     {
       institution: "Indian Institute of Information Technology (IIIT) Manipur",
-      degree: "Bachelor of Technology",
-      field: "Electronics and Communication Engineering",
+      degree: "Bachelor of Technology in Electronics and Communication Engineering",
+      field: "CGPA: 7.31",
       location: "Senapati, Manipur",
       period: "Nov. 2022 – May 2026"
-    },
-    {
-      institution: "Narayana Junior College",
-      degree: "MPC (Intermediate / Class 12)",
-      location: "Andhra Pradesh, India",
-      period: "Class of 2022"
-    },
-    {
-      institution: "Narayana School",
-      degree: "SSC (10th Standard)",
-      location: "Andhra Pradesh, India",
-      period: "Class of 2020"
     }
   ],
   certifications: [
+    {
+      name: "Joy of Computing Using Python – 92%",
+      issuer: "NPTEL",
+      status: "Completed (92%)",
+      link: "https://nptel.ac.in"
+    },
+    {
+      name: "Deep Learning – 83%",
+      issuer: "NPTEL",
+      status: "Completed (83%)",
+      link: "https://nptel.ac.in"
+    },
+    {
+      name: "Digital Image Processing",
+      issuer: "NPTEL",
+      status: "Completed",
+      link: "https://nptel.ac.in"
+    },
     {
       name: "SQL Advanced",
       issuer: "HackerRank",
@@ -234,21 +242,6 @@ export const portfolioData = {
     {
       name: "Complete Data Analyst Bootcamp",
       issuer: "Udemy",
-      status: "In Progress"
-    },
-    {
-      name: "Deep Learning",
-      issuer: "NPTEL",
-      status: "Completed"
-    },
-    {
-      name: "Joy of Computing Using Python",
-      issuer: "NPTEL",
-      status: "Completed"
-    },
-    {
-      name: "Digital Image Processing",
-      issuer: "NPTEL",
       status: "Completed"
     }
   ],
