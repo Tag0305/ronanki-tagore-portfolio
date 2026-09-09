@@ -9,7 +9,7 @@ const servicesData = [
   {
     num: "02",
     name: "Predictive Analytics & ML",
-    description: "Exploratory data analysis using Pandas and Seaborn. Feature engineering, scaling, and training machine learning classification algorithms (Logistic Regression, Random Forest) achieving 88.0% churn prediction accuracy."
+    description: "Exploratory data analysis using Pandas, Seaborn, and Matplotlib. Feature engineering, statistical modeling, and machine learning classification algorithms."
   },
   {
     num: "03",

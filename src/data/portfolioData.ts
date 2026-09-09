@@ -95,7 +95,7 @@ export const portfolioData = {
     github: "https://github.com/Tag0305",
     linkedin: "https://linkedin.com/in/tagoreronanki",
     portfolio: "https://data-analyst-resume-portfolio.vercel.app",
-    summary: "I am an Electronics and Communication Engineering student at IIIT Manipur with hands-on experience in SQL, Python, machine learning, business analytics, and cloud data pipelines. Currently working as a Freelance AI Evaluation & Benchmark Developer with Airdawgs, focusing on Project Terminus Edition 2 and deterministic evaluation of coding agents."
+    summary: "Electronics and Communication Engineering student at IIIT Manipur with hands-on experience in SQL, Python, machine learning, business analytics, cloud data pipelines, and AI evaluation & benchmark development with Airdawgs."
   },
   experience: [
     {
@@ -108,28 +108,16 @@ export const portfolioData = {
           status: "CURRENT",
           description: "Evaluating and benchmarking advanced Large Language Models (LLMs) and AI agents across real-world software engineering tasks, with emphasis on reasoning quality, instruction following, code reliability, execution accuracy, and reproducibility.",
           responsibilities: [
-            "Evaluated and benchmarked advanced Large Language Models (LLMs) and AI agents across real-world software engineering tasks, focusing on reasoning quality, instruction following, code reliability, execution accuracy, and reproducibility.",
+            "Worked on Project Terminus Edition 2, evaluating and benchmarking advanced Large Language Models (LLMs) and AI agents across real-world software engineering tasks, with emphasis on reasoning quality, instruction following, code reliability, execution accuracy, and reproducibility.",
             "Designed challenging benchmark tasks with detailed technical specifications, reference/oracle solutions, deterministic evaluation criteria, automated test suites, and structured scoring workflows.",
             "Built reproducible Docker/Linux environments with pinned dependencies and deterministic validation pipelines for consistent model evaluation.",
             "Analyzed AI-generated solutions to identify reasoning failures, edge cases, invalid inputs, state inconsistencies, and non-generalizable behavior.",
             "Diagnosed benchmark and execution failures across Python, Go, Java, Bash, Git, Docker, and Linux environments using automated and oracle-based validation.",
             "Incorporated reviewer feedback to improve benchmark fairness, difficulty, reproducibility, and resistance to hardcoded solutions."
           ]
-        },
-        {
-          name: "PROJECT SENTINEL",
-          status: "COMPLETED",
-          description: "Technical AI evaluation and coding-task review, focusing on task validity, test coverage, instruction quality, and reliable model evaluation.",
-          responsibilities: [
-            "Reviewed technical coding and machine-learning tasks for correctness and validity.",
-            "Evaluated whether task requirements were properly covered by tests and regression protection.",
-            "Checked whether tested behavior was clearly documented in task instructions without accidental solution leakage.",
-            "Reviewed oracle solutions against documented requirements and technical edge cases.",
-            "Improved task specifications while preserving fairness, difficulty, and intended evaluation scope."
-          ]
         }
       ],
-      technologies: ["Python", "Docker", "Linux", "Git", "GitHub", "GitHub Actions", "Pytest", "Go", "Java", "Bash", "Project Terminus Edition 2", "Project Sentinel", "AI Benchmark Evaluation", "Oracle Verification", "Automated Testing"]
+      technologies: ["Python", "Docker", "Linux", "Git", "GitHub", "GitHub Actions", "Pytest", "Go", "Java", "Bash", "Project Terminus Edition 2", "AI Benchmark Evaluation", "Oracle Verification", "Automated Testing"]
     }
   ],
   skills: {
@@ -157,17 +145,17 @@ export const portfolioData = {
   },
   projects: [
     {
-      title: "AI Anomaly Analyst",
-      category: "Python & Machine Learning",
-      problem: "Detecting unusual records and subtle risk patterns across multi-dimensional business datasets requires an automated, interpretable anomaly detection application.",
-      approach: "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations. Implemented data preprocessing and anomaly scoring to identify unusual records and highlight the strongest contributing feature for each detected anomaly. Developed an interactive Streamlit dashboard with CSV upload/export, analyst-friendly summaries, Pytest validation, and GitHub Actions CI for reproducible analysis.",
-      result: "Delivered an interactive Streamlit dashboard providing automated severity scoring, anomaly flagging, and CI-tested reproducible execution.",
-      technologies: ["Python", "Pandas", "Scikit-Learn", "Streamlit", "Pytest", "GitHub Actions"],
-      githubUrl: "https://github.com/Tag0305/ai-anomaly-agent",
+      title: "RAG-Enhanced IoT Health Monitoring System",
+      category: "Python, RAG & Explainable AI",
+      problem: "Healthcare telemetry requires automated, explainable risk analysis and semantic retrieval over synthetic/sample health records.",
+      approach: "Built an end-to-end RAG-enhanced IoT health-monitoring prototype integrating ThingSpeak telemetry, preprocessing, configurable rule-based risk analysis, semantic retrieval, and explainable AI feedback. Implemented SentenceTransformer embeddings with FAISS top-k semantic retrieval over synthetic/sample health records and deterministic fallback for offline and API-key-free execution. Developed a Gradio interface for telemetry summaries, risk flags, retrieved context, and conversational health feedback with Pytest validation and GitHub Actions CI.",
+      result: "Delivered a RAG-enhanced prototype with Gradio UI, FAISS semantic retrieval, Pytest validation, and GitHub Actions CI.",
+      technologies: ["Python", "RAG", "FAISS", "Gemini", "ThingSpeak", "Gradio", "Pytest", "GitHub Actions"],
+      githubUrl: "https://github.com/Tag0305/rag-iot-health-monitoring",
       detailedPoints: [
-        "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations.",
-        "Implemented data preprocessing and anomaly scoring to identify unusual records and highlight the strongest contributing feature for each detected anomaly.",
-        "Developed an interactive Streamlit dashboard with CSV upload/export, analyst-friendly summaries, Pytest validation, and GitHub Actions CI for reproducible analysis."
+        "Built an end-to-end RAG-enhanced IoT health-monitoring prototype integrating ThingSpeak telemetry, preprocessing, configurable rule-based risk analysis, semantic retrieval, and explainable AI feedback.",
+        "Implemented SentenceTransformer embeddings with FAISS top-k semantic retrieval over synthetic/sample health records and deterministic fallback for offline and API-key-free execution.",
+        "Developed a Gradio interface for telemetry summaries, risk flags, retrieved context, and conversational health feedback with Pytest validation and GitHub Actions CI."
       ]
     },
     {
@@ -176,7 +164,7 @@ export const portfolioData = {
       problem: "Unstructured e-commerce transaction histories required quantitative analysis to track customer purchasing behavior, repeat purchases, product performance, and retention trends.",
       approach: "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention.",
       result: "Identified product categories with 40%+ repeat purchase rates and translated query results into marketing and inventory KPI insights.",
-      technologies: ["PostgreSQL", "SQL", "CTEs", "Window Functions"],
+      technologies: ["PostgreSQL", "SQL", "CTEs", "Window Functions", "Schema Design"],
       githubUrl: "https://github.com/Tag0305/sql-ecommerce-analytics",
       detailedPoints: [
         "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention.",
@@ -203,7 +191,6 @@ export const portfolioData = {
     {
       institution: "Indian Institute of Information Technology (IIIT) Manipur",
       degree: "Bachelor of Technology in Electronics and Communication Engineering",
-      field: "CGPA: 7.31",
       location: "Senapati, Manipur",
       period: "Nov. 2022 – May 2026"
     }

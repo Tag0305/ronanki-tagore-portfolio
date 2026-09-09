@@ -25,46 +25,34 @@ interface ProjectItem {
 const projectsData: ProjectItem[] = [
   {
     num: "01",
-    category: "Docker & Deterministic Testing",
-    name: "Deterministic AI Agent Evaluation Benchmarks",
-    technology: ["Python", "Go", "Java", "Bash", "Docker", "Linux", "Git"],
-    problem: "Evaluating advanced AI coding agents requires reproducible, containerized test suites that prevent hallucinated passes and hardcoded solutions.",
-    approach: "Designed offline, self-contained benchmark tasks with public technical contracts, oracle solutions, automated verification, negative controls, and edge-case coverage.",
-    result: "Built reproducible verification systems ensuring deterministic evaluation results and state consistency.",
-    image: "/images/projects/ai_benchmark_evaluation_dashboard.png",
-    isPrivate: true,
-    githubUrl: ""
+    category: "Python, RAG & Explainable AI",
+    name: "RAG-Enhanced IoT Health Monitoring System",
+    technology: ["Python", "RAG", "FAISS", "Gemini", "ThingSpeak", "Gradio", "Pytest", "GitHub Actions"],
+    problem: "Healthcare telemetry requires automated, explainable risk analysis and semantic retrieval over synthetic/sample health records.",
+    approach: "Built an end-to-end RAG-enhanced IoT health-monitoring prototype integrating ThingSpeak telemetry, preprocessing, configurable rule-based risk analysis, semantic retrieval, and explainable AI feedback. Implemented SentenceTransformer embeddings with FAISS top-k semantic retrieval over synthetic/sample health records and deterministic fallback for offline and API-key-free execution.",
+    result: "Developed a Gradio interface for telemetry summaries, risk flags, retrieved context, and conversational health feedback with Pytest validation and GitHub Actions CI.",
+    isPrivate: false,
+    githubUrl: "https://github.com/Tag0305/rag-iot-health-monitoring"
   },
   {
     num: "02",
     category: "PostgreSQL & SQL Analytics",
     name: "SQL E-Commerce Business Analytics",
     technology: ["PostgreSQL", "SQL", "CTEs", "Window Functions", "Schema Design"],
-    problem: "Unstructured transaction histories required quantitative analysis to identify high-value customer segments and calculate cohort retention.",
-    approach: "Designed a multi-table PostgreSQL database. Optimized queries using CTEs, LEAD, LAG, DENSE_RANK, and window functions.",
-    result: "Identified product categories with >40% repeat-purchase rates to support marketing and inventory decisions.",
+    problem: "Unstructured e-commerce transaction histories required quantitative analysis to track customer purchasing behavior, repeat purchases, product performance, and retention trends.",
+    approach: "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention. Created analytical queries to track customer purchasing behavior, repeat purchases, product performance, and retention trends across transaction data.",
+    result: "Identified product categories with 40%+ repeat purchase rates and translated query results into marketing and inventory KPI insights.",
     isPrivate: false,
     githubUrl: "https://github.com/Tag0305/sql-ecommerce-analytics"
   },
   {
     num: "03",
-    category: "Python, ML & Streamlit",
-    name: "AI Anomaly Analyst",
-    technology: ["Python", "Pandas", "Scikit-Learn", "Streamlit", "Pytest", "GitHub Actions"],
-    problem: "Identifying subtle anomalies, operational outliers, and risk patterns across multi-dimensional business datasets requires an automated, interpretable detection workflow.",
-    approach: "Built an end-to-end anomaly detection application for structured business datasets using Isolation Forest, severity scoring, and feature-level explanations with an interactive Streamlit dashboard, CSV upload/export, Pytest validation, and GitHub Actions CI.",
-    result: "Delivered an automated anomaly scoring system identifying unusual records and highlighting top contributing risk features.",
-    isPrivate: false,
-    githubUrl: "https://github.com/Tag0305/ai-anomaly-agent"
-  },
-  {
-    num: "04",
     category: "Python & Data Engineering",
     name: "End-to-End Cloud Data Pipeline Simulation",
-    technology: ["Python", "SQLite", "SQL", "BigQuery-style workflow"],
-    problem: "Manual market data collection was prone to errors, lacking real-time stream ingestion, automated transformations, and structured staging.",
-    approach: "Built an automated Python pipeline to ingest real-time market asset data through a REST API, loading into a SQLite warehouse with dbt-style CTE transformations.",
-    result: "Automated ingestion of live asset records, calculating volume-to-market-cap ratios and generating automated report outputs.",
+    technology: ["Python", "SQLite", "BigQuery", "SQL", "dbt-style CTEs"],
+    problem: "Manual market data collection was prone to errors, lacking automated stream ingestion and structured analytical warehouse staging.",
+    approach: "Built an automated Python pipeline to ingest market asset data through an external API and load it into a SQLite/BigQuery-style analytical warehouse. Applied dbt-style CTE transformations for data cleaning, structuring, and analysis to prepare reliable datasets for downstream reporting.",
+    result: "Developed an automated reporting workflow to generate updated market metrics and present processed data for analytical monitoring.",
     isPrivate: false,
     githubUrl: "https://github.com/Tag0305/cloud-data-pipeline-simulation"
   }

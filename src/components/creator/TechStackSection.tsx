@@ -1,7 +1,7 @@
 import * as React from "react"
 import { FadeUp } from "./FadeUp"
 import { portfolioData } from "../../data/portfolioData"
-import { Layers, Sparkles, Box, Palette, Zap, Info } from "lucide-react"
+import { Layers, Sparkles, Box, Palette, Zap, Info, FileText, ArrowUpRight } from "lucide-react"
 
 export function TechStackSection() {
   const stack = portfolioData.techDesignStack
@@ -51,9 +51,21 @@ export function TechStackSection() {
                 <em style={{ color: "#C9A84C" }}>Stack</em>
               </h2>
             </div>
-            <p className="text-sm max-w-md leading-relaxed" style={{ color: "#666" }}>
-              {stack.subtitle}
-            </p>
+            <div className="space-y-3 max-w-md">
+              <p className="text-sm leading-relaxed" style={{ color: "#666" }}>
+                {stack.subtitle}
+              </p>
+              <a
+                href="/portfolio_tech_stack.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 btn-gold-outline text-xs"
+              >
+                <FileText className="h-3.5 w-3.5" />
+                View Tech Stack PDF Specification
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
         </FadeUp>
 

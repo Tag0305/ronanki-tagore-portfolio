@@ -39,7 +39,7 @@ export function Career() {
                 className="timeline-line relative pl-8 ml-1 space-y-10 py-2"
                 style={{ borderLeft: "2px solid rgba(201,168,76,0.35)" }}
               >
-                {portfolioData.education.map((edu, index) => (
+                {(portfolioData.education as Array<{ institution: string; degree: string; field?: string; location: string; period: string }>).map((edu, index) => (
                   <div key={index} className="relative space-y-1.5">
                     {/* Dot */}
                     <div

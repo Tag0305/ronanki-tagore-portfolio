@@ -13,33 +13,30 @@ interface SkillItem {
 
 const skillsList: SkillItem[] = [
   // Databases & SQL
-  { name: "PostgreSQL", category: "db", description: "Relational DB, CTEs, Window Functions (LEAD/LAG)", projectRelation: "SQL E-Commerce Analytics", icon: "🐘" },
-  { name: "SQL (Advanced)", category: "db", description: "Self-joins, DENSE_RANK, group aggregates, subqueries", projectRelation: "HackerRank Verified", icon: "🗄️" },
-  { name: "SQLite", category: "db", description: "Local warehouse staging and lightweight streaming storage", projectRelation: "Cloud Pipeline Simulation", icon: "⚡" },
-  { name: "MySQL", category: "db", description: "Schema normalization, primary/foreign keys, indexing", projectRelation: "Relational Database Design", icon: "🐬" },
+  { name: "PostgreSQL", category: "db", description: "Multi-table relational schema design, CTEs, Window Functions (LEAD, LAG, DENSE_RANK)", projectRelation: "SQL E-Commerce Analytics", icon: "🐘" },
+  { name: "SQL (PostgreSQL, SQLite, MySQL)", category: "db", description: "Complex queries, self-joins, CTEs, window functions, and cohort analysis", projectRelation: "HackerRank SQL Advanced", icon: "🗄️" },
+  { name: "SQLite", category: "db", description: "Analytical warehouse staging and lightweight local database storage", projectRelation: "Cloud Pipeline Simulation", icon: "⚡" },
 
-  // Python & Analytics
-  { name: "Python", category: "python", description: "Data wrangling, script automation, machine learning", projectRelation: "Customer Churn Project", icon: "🐍" },
-  { name: "Pandas & NumPy", category: "python", description: "DataFrame manipulations, matrix operations, missing data imputation", projectRelation: "1,000-Customer Dataset", icon: "🐼" },
-  { name: "Scikit-Learn", category: "python", description: "Classification models, Random Forests, train-test splits", projectRelation: "88% Accuracy Model", icon: "🤖" },
-  { name: "Seaborn & Matplotlib", category: "python", description: "Exploratory Data Analysis (EDA), distribution plots", projectRelation: "Churn Feature Importances", icon: "📊" },
-
-  // Business Intelligence
-  { name: "Power BI", category: "bi", description: "Interactive executive dashboards, DAX measures, data modeling", projectRelation: "KPI Visualization", icon: "📈" },
-  { name: "Tableau", category: "bi", description: "Visual story points, cohort maps, trend dashboards", projectRelation: "Business Analytics", icon: "🎨" },
-  { name: "Microsoft Excel", category: "bi", description: "Pivot Tables, VLOOKUP, INDEX/MATCH, financial summary sheets", projectRelation: "Data Operations", icon: "📗" },
+  // Python & AI Evaluation
+  { name: "Python", category: "python", description: "Data wrangling, pipeline automation, machine learning, and benchmark scripting", projectRelation: "Python Intermediate", icon: "🐍" },
+  { name: "Pandas & NumPy", category: "python", description: "DataFrame manipulations, matrix operations, data cleaning and structuring", projectRelation: "Data Analytics", icon: "🐼" },
+  { name: "Scikit-Learn & NLTK", category: "python", description: "Predictive modeling, statistical analysis, and natural language processing", projectRelation: "Machine Learning", icon: "🤖" },
+  { name: "Streamlit & Gradio", category: "python", description: "Interactive dashboards and UI interfaces for AI feedback and telemetry summaries", projectRelation: "RAG IoT Health Monitoring", icon: "🚀" },
+  { name: "AI Evaluation & Benchmarking", category: "python", description: "LLM & AI agent evaluation, benchmark authoring, oracle solutions, failure analysis", projectRelation: "Airdawgs Freelance", icon: "🧠" },
 
   // Tools & Platforms
-  { name: "Git & GitHub", category: "tools", description: "Version control, code commits, branch workflow", projectRelation: "github.com/Tag0305", icon: "🐙" },
-  { name: "pgAdmin", category: "tools", description: "PostgreSQL server administration and visual query plan analysis", projectRelation: "Database Admin", icon: "⚙️" },
-  { name: "Jupyter Notebook", category: "tools", description: "Iterative exploratory analysis and model prototyping", projectRelation: "ML Environment", icon: "📓" },
-  { name: "VS Code", category: "tools", description: "IDE development, Python script execution, Vite workspace", projectRelation: "Development Environment", icon: "💻" },
+  { name: "Docker & Linux", category: "tools", description: "Reproducible containerized environments with pinned dependencies for consistent model evaluation", projectRelation: "Project Terminus Edition 2", icon: "🐳" },
+  { name: "Git, GitHub & Actions", category: "tools", description: "Version control, automated test suites, and GitHub Actions CI pipelines", projectRelation: "github.com/Tag0305", icon: "🐙" },
+  { name: "Pytest", category: "tools", description: "Automated test suites and deterministic validation pipelines", projectRelation: "RAG IoT & Terminus", icon: "🧪" },
+  { name: "BigQuery", category: "tools", description: "Cloud data warehouse analytical query execution and data staging", projectRelation: "Cloud Data Pipeline", icon: "☁️" },
+  { name: "Power BI, Tableau & Excel", category: "bi", description: "Interactive dashboards, business reporting, and financial data summary sheets", projectRelation: "Udemy Data Bootcamp", icon: "📈" },
+  { name: "Jupyter & VS Code", category: "tools", description: "Interactive data analysis, model prototyping, and IDE workspace", projectRelation: "Development Environment", icon: "💻" },
 
   // Concepts
-  { name: "Cohort Retention Analysis", category: "concepts", description: "Tracking user return rates across monthly purchase periods", projectRelation: "Product Repeat Rate (>40%)", icon: "🔄" },
-  { name: "ETL & ELT Pipelines", category: "concepts", description: "Extract, Transform, Load workflows & dbt-style SQL CTE modeling", projectRelation: "API Ingestion Script", icon: "🛠️" },
-  { name: "Predictive Modelling", category: "concepts", description: "Supervised classification, feature scaling, model precision/recall", projectRelation: "Random Forest Classifier", icon: "🔮" },
-  { name: "Business KPI Formulation", category: "concepts", description: "Translating database structures into commercial revenue metrics", projectRelation: "Executive Reporting", icon: "💡" }
+  { name: "Relational Database Design", category: "concepts", description: "Multi-table database schemas, constraints, primary/foreign key relationships", projectRelation: "PostgreSQL Database", icon: "📐" },
+  { name: "ETL/ELT Pipelines & API Integration", category: "concepts", description: "Automated data ingestion via external APIs and dbt-style SQL CTE transformations", projectRelation: "Cloud Pipeline Simulation", icon: "🛠️" },
+  { name: "Cohort Retention Analysis", category: "concepts", description: "Tracking customer retention trends, monthly growth, and repeat purchase rates", projectRelation: "Product Repeat Rate (40%+)", icon: "🔄" },
+  { name: "Data Wrangling & Predictive Modeling", category: "concepts", description: "Structuring raw telemetry/market data for predictive modeling and statistical analysis", projectRelation: "Data Methodologies", icon: "🔮" }
 ]
 
 export function SkillsSection() {
