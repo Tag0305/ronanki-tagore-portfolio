@@ -158,26 +158,32 @@ export function TechStackSection() {
                     </span>
                   </div>
 
-                  {/* Two-Column Editorial Table */}
+                  {/* Two-Column Specification Table matching PDF design */}
                   <div className="divide-y" style={{ borderColor: "rgba(201,168,76,0.12)" }}>
                     <div
-                      className="hidden sm:grid grid-cols-12 px-6 py-2.5 text-[11px] font-mono uppercase tracking-wider font-bold"
-                      style={{ background: "#FAF9F6", color: "#888" }}
+                      className="hidden sm:grid grid-cols-12 px-6 py-3 text-xs font-mono uppercase tracking-wider font-bold"
+                      style={{ background: "#1a1a1a", color: "#FFFFFF" }}
                     >
-                      <div className="col-span-4">Technology / Approach</div>
-                      <div className="col-span-8">Purpose &amp; Architectural Role</div>
+                      <div className="col-span-4 flex items-center gap-2">
+                        <span style={{ color: "#C9A84C" }}>//</span> Technology / Approach
+                      </div>
+                      <div className="col-span-8 flex items-center gap-2">
+                        <span style={{ color: "#C9A84C" }}>//</span> Purpose
+                      </div>
                     </div>
 
                     {category.items.map((item, i) => (
                       <div
                         key={item.technology}
-                        className="grid grid-cols-1 sm:grid-cols-12 px-6 py-4 items-start gap-2 sm:gap-6 transition-colors hover:bg-[rgba(201,168,76,0.04)] group"
+                        className={`grid grid-cols-1 sm:grid-cols-12 px-6 py-4 items-start gap-2 sm:gap-6 transition-colors hover:bg-[rgba(201,168,76,0.06)] group ${
+                          i % 2 === 1 ? "bg-[#FAF9F6]" : "bg-[#FFFFFF]"
+                        }`}
                       >
                         {/* Technology Column */}
                         <div className="sm:col-span-4 flex items-center gap-2">
                           <span
                             className="font-mono text-xs font-bold shrink-0"
-                            style={{ color: "rgba(201,168,76,0.5)" }}
+                            style={{ color: "#C9A84C" }}
                           >
                             0{i + 1}.
                           </span>
@@ -190,7 +196,7 @@ export function TechStackSection() {
 
                         {/* Purpose Column */}
                         <div className="sm:col-span-8">
-                          <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "#555" }}>
+                          <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "#444" }}>
                             {item.purpose}
                           </p>
                         </div>
@@ -203,25 +209,25 @@ export function TechStackSection() {
           })}
         </div>
 
-        {/* Positioning & Strategic Architecture Box */}
+        {/* Positioning & Strategic Architecture Box (Matching PDF Positioning Section) */}
         <FadeUp delay={0.2}>
           <div
-            className="rounded-2xl p-6 sm:p-8 space-y-5"
+            className="rounded-2xl p-6 sm:p-8 space-y-5 shadow-sm"
             style={{
               background: "linear-gradient(135deg, #FFFFFF 0%, #FAF9F6 100%)",
               border: "1px solid rgba(201,168,76,0.35)",
-              borderLeft: "4px solid #C9A84C"
+              borderLeft: "5px solid #C9A84C"
             }}
           >
             <div className="flex items-center gap-2">
               <span
-                className="font-mono text-xs uppercase tracking-widest font-bold px-2.5 py-0.5 rounded"
+                className="font-mono text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded"
                 style={{
-                  background: "rgba(201,168,76,0.12)",
-                  color: "#9A7A2A"
+                  background: "#1a1a1a",
+                  color: "#C9A84C"
                 }}
               >
-                // Positioning
+                Positioning
               </span>
               <span className="font-serif italic text-sm text-[#888]">
                 Executive Summary
@@ -240,7 +246,7 @@ export function TechStackSection() {
               style={{ borderColor: "rgba(201,168,76,0.18)" }}
             >
               <Info className="h-4 w-4 shrink-0 mt-0.5" style={{ color: "#C9A84C" }} />
-              <p className="text-xs font-mono leading-relaxed" style={{ color: "#777" }}>
+              <p className="text-xs font-mono leading-relaxed" style={{ color: "#666" }}>
                 {stack.note}
               </p>
             </div>
