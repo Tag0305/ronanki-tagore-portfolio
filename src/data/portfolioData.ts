@@ -94,7 +94,7 @@ export const portfolioData = {
     phone: "+91 9390017456",
     github: "https://github.com/Tag0305",
     linkedin: "https://linkedin.com/in/tagoreronanki",
-    portfolio: "https://data-analyst-resume-portfolio.vercel.app",
+    portfolio: "https://ronanki-tagore.vercel.app",
     summary: "Electronics and Communication Engineering graduate from IIIT Manipur working in AI evaluation and benchmarking, authoring coding-agent tasks, scientific problems, and model-response evaluations, with a foundation in Python, SQL, data analysis, and Linux systems."
   },
   experience: [

@@ -2,7 +2,7 @@
 
 Personal portfolio of **Ronanki Tagore**: AI evaluation & benchmarking (Handshake AI, Airdawgs Labs), scientific task authoring, Python & data analysis, and Linux systems programming.
 
-**Live:** https://data-analyst-resume-portfolio.vercel.app
+**Live:** https://ronanki-tagore.vercel.app
 **Résumé:** [`public/resume.pdf`](public/resume.pdf)
 
 ## Sections
