@@ -1,6 +1,7 @@
 import * as React from "react"
 import { ArrowUpRight } from "lucide-react"
 import { FadeUp } from "./FadeUp"
+import { portfolioData } from "../../data/portfolioData"
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5" {...props}>
@@ -22,41 +23,17 @@ interface ProjectItem {
   githubUrl: string
 }
 
-const projectsData: ProjectItem[] = [
-  {
-    num: "01",
-    category: "Python, RAG & Explainable AI",
-    name: "RAG-Enhanced IoT Health Monitoring System",
-    technology: ["Python", "RAG", "FAISS", "Gemini", "ThingSpeak", "Gradio", "Pytest", "GitHub Actions"],
-    problem: "Healthcare telemetry requires automated, explainable risk analysis and semantic retrieval over synthetic/sample health records.",
-    approach: "Built an end-to-end RAG-enhanced IoT health-monitoring prototype integrating ThingSpeak telemetry, preprocessing, configurable rule-based risk analysis, semantic retrieval, and explainable AI feedback. Implemented SentenceTransformer embeddings with FAISS top-k semantic retrieval over synthetic/sample health records and deterministic fallback for offline and API-key-free execution.",
-    result: "Developed a Gradio interface for telemetry summaries, risk flags, retrieved context, and conversational health feedback with Pytest validation and GitHub Actions CI.",
-    isPrivate: false,
-    githubUrl: "https://github.com/Tag0305/rag-iot-health-monitoring"
-  },
-  {
-    num: "02",
-    category: "PostgreSQL & SQL Analytics",
-    name: "SQL E-Commerce Business Analytics",
-    technology: ["PostgreSQL", "SQL", "CTEs", "Window Functions", "Schema Design"],
-    problem: "Unstructured e-commerce transaction histories required quantitative analysis to track customer purchasing behavior, repeat purchases, product performance, and retention trends.",
-    approach: "Designed a multi-table PostgreSQL database and used CTEs, window functions (LEAD, LAG, DENSE_RANK), and self-joins to analyze monthly growth and cohort retention. Created analytical queries to track customer purchasing behavior, repeat purchases, product performance, and retention trends across transaction data.",
-    result: "Identified product categories with 40%+ repeat purchase rates and translated query results into marketing and inventory KPI insights.",
-    isPrivate: false,
-    githubUrl: "https://github.com/Tag0305/sql-ecommerce-analytics"
-  },
-  {
-    num: "03",
-    category: "Python & Data Engineering",
-    name: "End-to-End Cloud Data Pipeline Simulation",
-    technology: ["Python", "SQLite", "BigQuery", "SQL", "dbt-style CTEs"],
-    problem: "Manual market data collection was prone to errors, lacking automated stream ingestion and structured analytical warehouse staging.",
-    approach: "Built an automated Python pipeline to ingest market asset data through an external API and load it into a SQLite/BigQuery-style analytical warehouse. Applied dbt-style CTE transformations for data cleaning, structuring, and analysis to prepare reliable datasets for downstream reporting.",
-    result: "Developed an automated reporting workflow to generate updated market metrics and present processed data for analytical monitoring.",
-    isPrivate: false,
-    githubUrl: "https://github.com/Tag0305/cloud-data-pipeline-simulation"
-  }
-]
+const projectsData: ProjectItem[] = portfolioData.projects.map((p, i) => ({
+  num: String(i + 1).padStart(2, "0"),
+  category: p.category,
+  name: p.title,
+  technology: p.technologies,
+  problem: p.problem,
+  approach: p.approach,
+  result: p.result,
+  isPrivate: false,
+  githubUrl: p.githubUrl
+}))
 
 export function ProjectsSection() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
@@ -84,7 +61,7 @@ export function ProjectsSection() {
               </h2>
             </div>
             <p className="text-sm max-w-xs" style={{ color: "#888" }}>
-              End-to-end analytical projects spanning AI evaluation, SQL analytics, machine learning, and data engineering.
+              Hands-on projects spanning generative AI, retrieval-augmented systems, SQL analytics, and data engineering.
             </p>
           </div>
         </FadeUp>

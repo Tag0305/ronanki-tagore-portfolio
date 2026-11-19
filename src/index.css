@@ -277,6 +277,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 2rem;
   overflow: hidden;
+  flex: 1;
+  min-width: 0;
 }
 .role-ticker-item {
   position: absolute;
@@ -284,10 +286,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
+  font-size: clamp(0.62rem, 2.6vw, 0.8rem);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #C9A84C;
   opacity: 0;
   transform: translateY(8px);

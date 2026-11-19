@@ -64,7 +64,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
             className="font-mono text-xs uppercase tracking-widest"
             style={{ color: "#888" }}
           >
-            Data Analyst & AI Evaluation Developer
+            Portfolio
           </p>
         </div>
 

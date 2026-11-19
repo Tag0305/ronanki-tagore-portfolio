@@ -1,12 +1,13 @@
 import * as React from "react"
 import { RoleTicker } from "./RoleTicker"
+import { portfolioData } from "../../data/portfolioData"
 import { ArrowDownRight, FileText, Mail } from "lucide-react"
 
 const NAV_LINKS = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
   { label: "Expertise", id: "expertise" },
-  { label: "Stack", id: "tech-stack" },
+  { label: "Skills", id: "skills" },
   { label: "Experience", id: "experience" },
   { label: "Education", id: "career" },
   { label: "Contact", id: "contact" },
@@ -116,7 +117,7 @@ export function HeroSection() {
                 className="font-mono text-xs uppercase tracking-widest font-semibold"
                 style={{ color: "#C9A84C" }}
               >
-                // Data & AI Developer
+                // Portfolio
               </span>
             </div>
 
@@ -154,12 +155,13 @@ export function HeroSection() {
               }}
             >
               <p className="text-sm leading-relaxed" style={{ color: "#555" }}>
-                I transform raw data and complex technical requirements into{" "}
-                <strong style={{ color: "#1a1a1a" }}>reliable analysis</strong>,{" "}
-                <strong style={{ color: "#1a1a1a" }}>reproducible systems</strong>, and{" "}
-                <strong style={{ color: "#1a1a1a" }}>rigorous AI evaluations</strong>.
-                Freelance AI Evaluation & Benchmark Developer at{" "}
-                <strong style={{ color: "#C9A84C" }}>Airdawgs</strong>.
+                I build{" "}
+                <strong style={{ color: "#1a1a1a" }}>rigorous AI evaluations</strong>,{" "}
+                <strong style={{ color: "#1a1a1a" }}>reproducible benchmarks</strong>, and{" "}
+                <strong style={{ color: "#1a1a1a" }}>data-driven systems</strong>, from coding-agent tasks
+                to scientific problems in biology, chemistry, and physics. Currently with{" "}
+                <strong style={{ color: "#C9A84C" }}>Handshake AI</strong> and{" "}
+                <strong style={{ color: "#C9A84C" }}>Airdawgs Labs</strong>.
               </p>
             </div>
 
@@ -208,11 +210,11 @@ export function HeroSection() {
         <div className="flex items-center gap-2">
           <div className="avail-dot" />
           <span className="font-mono text-xs uppercase tracking-widest" style={{ color: "#555" }}>
-            Airdawgs · Freelance &nbsp;•&nbsp; July 2026 – Present
+            AI Evaluation &amp; Benchmarking &nbsp;•&nbsp; Bengaluru, India
           </span>
         </div>
-        <span className="font-mono text-xs" style={{ color: "#C9A84C" }}>
-          data-analyst-resume-portfolio.vercel.app
+        <span className="font-mono text-xs hidden sm:inline" style={{ color: "#C9A84C" }}>
+          {portfolioData.personalInfo.portfolio.replace(/^https?:\/\//, "")}
         </span>
       </div>
 

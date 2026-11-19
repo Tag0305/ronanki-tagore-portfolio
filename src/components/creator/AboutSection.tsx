@@ -48,9 +48,9 @@ export function AboutSection() {
                   01 — Who I Am
                 </span>
                 <p className="leading-relaxed text-sm sm:text-base" style={{ color: "#555" }}>
-                  I am <strong style={{ color: "#1a1a1a" }}>Ronanki Tagore</strong>, a Data Analyst, SQL Developer, and
-                  Freelance AI Evaluation & Benchmark Developer working with{" "}
-                  <strong style={{ color: "#C9A84C" }}>Airdawgs</strong>, with a B.Tech in{" "}
+                  I am <strong style={{ color: "#1a1a1a" }}>Ronanki Tagore</strong>, an AI Evaluation Fellow at{" "}
+                  <strong style={{ color: "#C9A84C" }}>Handshake AI</strong> and an AI Evaluation &amp; Benchmarking
+                  Contributor at <strong style={{ color: "#C9A84C" }}>Airdawgs Labs</strong>, with a B.Tech in{" "}
                   <strong style={{ color: "#1a1a1a" }}>Electronics and Communication Engineering</strong> from IIIT Manipur.
                 </p>
               </div>
@@ -62,11 +62,12 @@ export function AboutSection() {
                   02 — Technical Focus
                 </span>
                 <p className="leading-relaxed text-sm sm:text-base" style={{ color: "#555" }}>
-                  My technical work spans <strong style={{ color: "#1a1a1a" }}>SQL analytics</strong>,{" "}
-                  <strong style={{ color: "#1a1a1a" }}>Python-based machine learning</strong>, and{" "}
-                  <strong style={{ color: "#1a1a1a" }}>deterministic AI benchmark engineering</strong>. I build
-                  reproducible systems, design oracle verifiers, and author rigorous
-                  evaluation tasks for coding and machine-learning agents.
+                  My work spans <strong style={{ color: "#1a1a1a" }}>AI benchmark engineering</strong>,{" "}
+                  <strong style={{ color: "#1a1a1a" }}>scientific task authoring</strong>, and{" "}
+                  <strong style={{ color: "#1a1a1a" }}>Python, SQL &amp; data analysis</strong>. I author
+                  Terminal-Bench-style tasks for coding agents with Docker environments and deterministic verifiers,
+                  write image-based Life Sciences, Chemistry, Physics and Engineering problems, and compare and
+                  review model responses. I also work with Linux systems programming and embedded toolchains.
                 </p>
               </div>
             </FadeUp>

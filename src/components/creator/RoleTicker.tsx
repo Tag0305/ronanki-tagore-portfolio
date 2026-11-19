@@ -1,11 +1,7 @@
 import * as React from "react"
+import { portfolioData } from "../../data/portfolioData"
 
-const roles = [
-  "Data Analyst",
-  "SQL Developer",
-  "AI Evaluation Developer",
-  "Benchmark Developer"
-]
+const roles = portfolioData.personalInfo.roles
 
 export function RoleTicker() {
   const [activeIndex, setActiveIndex] = React.useState(0)

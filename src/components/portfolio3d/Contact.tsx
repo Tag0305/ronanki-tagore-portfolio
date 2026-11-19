@@ -49,7 +49,7 @@ export function Contact() {
     {
       icon: MapPin,
       label: "Location",
-      value: "Palasa, Srikakulam, AP, India",
+      value: "Bengaluru, Karnataka, India",
       href: undefined,
     },
   ]
@@ -77,7 +77,7 @@ export function Contact() {
               className="font-serif italic text-lg sm:text-xl mx-auto max-w-xl"
               style={{ color: "#888" }}
             >
-              "I am interested in opportunities involving data analysis, SQL development, AI evaluation, benchmark development, and data-driven software systems."
+              "I am interested in opportunities involving AI evaluation, benchmark development, scientific task authoring, data analysis, and Linux systems work."
             </p>
 
             {/* Availability badge */}

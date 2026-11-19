@@ -5,7 +5,6 @@ import { portfolioData, type Experience, type ExperienceProject } from "../../da
 export function ExperienceSection() {
   const experiences = portfolioData.experience as Experience[]
   // Build flat list of all tabs: one tab per project under each company
-  // For Airdawgs we split into PROJECT TERMINUS + PROJECT SENTINEL
   const tabs: {
     company: string
     companyShort: string
@@ -69,44 +68,54 @@ export function ExperienceSection() {
               className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid rgba(201,168,76,0.20)", background: "#FFFFFF" }}
             >
-              {/* Company header */}
-              <div
-                className="px-5 py-4"
-                style={{ background: "#FAF9F6", borderBottom: "1px solid rgba(201,168,76,0.15)" }}
-              >
-                <p className="font-mono text-xs uppercase tracking-widest" style={{ color: "#888" }}>
-                  Airdawgs · Freelance
-                </p>
-                <p
-                  className="font-serif italic text-lg font-semibold mt-0.5"
-                  style={{ color: "#C9A84C" }}
-                >
-                  Freelance AI Evaluation & Benchmark Developer
-                </p>
-                <p className="font-mono text-xs mt-1" style={{ color: "#888" }}>
-                  July 2026 – Present
-                </p>
-              </div>
-
-              {/* Tab items */}
-              {tabs.map((tab, i) => (
-                <div
-                  key={tab.companyShort}
-                  className={`exp-tab-item ${activeTab === i ? "active" : ""}`}
-                  onClick={() => setActiveTab(i)}
-                >
-                  <p
-                    className="font-mono text-xs uppercase tracking-widest font-bold"
-                    style={{ color: activeTab === i ? "#C9A84C" : "#888" }}
+              {experiences.map((exp, expIdx) => (
+                <React.Fragment key={exp.company}>
+                  {/* Company header */}
+                  <div
+                    className="px-5 py-4"
+                    style={{
+                      background: "#FAF9F6",
+                      borderBottom: "1px solid rgba(201,168,76,0.15)",
+                      borderTop: expIdx > 0 ? "1px solid rgba(201,168,76,0.20)" : undefined
+                    }}
                   >
-                    {tab.companyShort}
-                  </p>
-                  {tab.project && (
-                    <p className="text-xs mt-0.5" style={{ color: "#1a1a1a" }}>
-                      {tab.project.status === "CURRENT" ? "Current Project" : "Completed"}
+                    <p className="font-mono text-xs uppercase tracking-widest" style={{ color: "#888" }}>
+                      {exp.company} · Remote
                     </p>
-                  )}
-                </div>
+                    <p
+                      className="font-serif italic text-lg font-semibold mt-0.5"
+                      style={{ color: "#C9A84C" }}
+                    >
+                      {exp.title}
+                    </p>
+                    {exp.period && (
+                      <p className="font-mono text-xs mt-1" style={{ color: "#888" }}>
+                        {exp.period}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Tab items */}
+                  {tabs.map((tab, i) => tab.company !== exp.company ? null : (
+                    <div
+                      key={tab.company + tab.companyShort}
+                      className={`exp-tab-item ${activeTab === i ? "active" : ""}`}
+                      onClick={() => setActiveTab(i)}
+                    >
+                      <p
+                        className="font-mono text-xs uppercase tracking-widest font-bold"
+                        style={{ color: activeTab === i ? "#C9A84C" : "#888" }}
+                      >
+                        Project {tab.companyShort}
+                      </p>
+                      {tab.project?.status && (
+                        <p className="text-xs mt-0.5" style={{ color: "#1a1a1a" }}>
+                          {tab.project.status === "CURRENT" ? "Current Project" : "Completed"}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </React.Fragment>
               ))}
             </div>
           </FadeUp>
@@ -117,31 +126,33 @@ export function ExperienceSection() {
               const isActive = activeTab === i
               const proj = tab.project
               return (
-                <div key={tab.companyShort} className={`exp-panel ${isActive ? "active" : ""}`}>
+                <div key={tab.company + tab.companyShort} className={`exp-panel ${isActive ? "active" : ""}`}>
                   {proj && (
                     <div className="space-y-6">
                       {/* Project header */}
                       <div className="space-y-2">
                         <div className="flex items-center gap-3 flex-wrap">
+                          {proj.status && (
                           <span
-                            className="font-mono text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full"
-                            style={{
-                              background: proj.status === "CURRENT"
-                                ? "rgba(34,197,94,0.12)"
-                                : "rgba(201,168,76,0.10)",
-                              color: proj.status === "CURRENT" ? "#16a34a" : "#9A7A2A",
-                              border: `1px solid ${proj.status === "CURRENT" ? "rgba(34,197,94,0.25)" : "rgba(201,168,76,0.25)"}`
-                            }}
-                          >
-                            {proj.status === "CURRENT" ? "Current" : "Completed"}
-                          </span>
+                              className="font-mono text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full"
+                              style={{
+                                background: proj.status === "CURRENT"
+                                  ? "rgba(34,197,94,0.12)"
+                                  : "rgba(201,168,76,0.10)",
+                                color: proj.status === "CURRENT" ? "#16a34a" : "#9A7A2A",
+                                border: `1px solid ${proj.status === "CURRENT" ? "rgba(34,197,94,0.25)" : "rgba(201,168,76,0.25)"}`
+                              }}
+                            >
+                              {proj.status === "CURRENT" ? "Current" : "Completed"}
+                            </span>
+                          )}
                           <span className="font-mono text-xs" style={{ color: "#888" }}>
-                            {tab.period}
+                            {tab.company} · {tab.title}
                           </span>
                         </div>
 
                         <h3 className="font-serif text-2xl sm:text-3xl font-semibold" style={{ color: "#1a1a1a" }}>
-                          <em style={{ color: "#C9A84C" }}>{proj.name}</em>
+                          <em style={{ color: "#C9A84C" }}>Project {proj.name}</em>
                         </h3>
 
                         <div

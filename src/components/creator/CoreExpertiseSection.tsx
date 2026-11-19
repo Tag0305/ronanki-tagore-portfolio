@@ -1,34 +1,17 @@
 import * as React from "react"
 import { FadeUp } from "./FadeUp"
-import { Database, ShieldCheck, Activity, BarChart3 } from "lucide-react"
+import { Database, ShieldCheck, Activity, BarChart3, FlaskConical, Terminal } from "lucide-react"
 
-const expertiseItems = [
+const expertiseItems: {
+  num: string
+  title: string
+  icon: React.ElementType
+  description: string
+  tags: string[]
+  skills?: { name: string; pct: number }[]
+}[] = [
   {
     num: "01",
-    title: "Data Analytics",
-    icon: BarChart3,
-    description: "Transforming raw datasets into clear insights through exploratory analysis, statistical methods, visualization, and business KPI reporting.",
-    tags: ["Exploratory EDA", "KPI Reporting", "Cohort Retention", "Statistical Methods"],
-    skills: [
-      { name: "Data Wrangling", pct: 92 },
-      { name: "EDA & Visualization", pct: 88 },
-      { name: "BI Reporting", pct: 80 },
-    ]
-  },
-  {
-    num: "02",
-    title: "SQL Development",
-    icon: Database,
-    description: "Building relational databases and advanced analytical queries using joins, CTEs, subqueries, window functions, retention analysis, and query optimization.",
-    tags: ["PostgreSQL", "SQLite", "CTEs", "Window Functions", "Schema Design"],
-    skills: [
-      { name: "PostgreSQL", pct: 90 },
-      { name: "Window Functions", pct: 85 },
-      { name: "Schema Design", pct: 82 },
-    ]
-  },
-  {
-    num: "03",
     title: "AI Benchmark & Evaluation",
     icon: ShieldCheck,
     description: "Designing deterministic evaluation tasks, public technical contracts, oracle solutions, automated verifiers, negative controls, and reproducible test environments.",
@@ -40,7 +23,38 @@ const expertiseItems = [
     ]
   },
   {
+    num: "02",
+    title: "Scientific & Multimodal Evaluation",
+    icon: FlaskConical,
+    description: "Authoring original image-based and multi-step problems in Life Sciences, Chemistry, Physics, and Engineering, and reviewing and comparing model responses for accuracy and reasoning.",
+    tags: ["Gel Electrophoresis & Western Blots", "Microbiology", "Cytogenetics", "Chemistry", "Physics", "Pairwise Comparison"]
+  },
+  {
+    num: "03",
+    title: "Data Analytics",
+    icon: BarChart3,
+    description: "Transforming raw datasets into clear insights through exploratory analysis, statistical methods, visualization, and business KPI reporting.",
+    tags: ["Exploratory EDA", "KPI Reporting", "Cohort Retention", "Statistical Methods"],
+    skills: [
+      { name: "Data Wrangling", pct: 92 },
+      { name: "EDA & Visualization", pct: 88 },
+      { name: "BI Reporting", pct: 80 },
+    ]
+  },
+  {
     num: "04",
+    title: "SQL Development",
+    icon: Database,
+    description: "Building relational databases and advanced analytical queries using joins, CTEs, subqueries, window functions, retention analysis, and query optimization.",
+    tags: ["PostgreSQL", "SQLite", "CTEs", "Window Functions", "Schema Design"],
+    skills: [
+      { name: "PostgreSQL", pct: 90 },
+      { name: "Window Functions", pct: 85 },
+      { name: "Schema Design", pct: 82 },
+    ]
+  },
+  {
+    num: "05",
     title: "Data Pipeline Engineering",
     icon: Activity,
     description: "Building automated ingestion, transformation, storage, validation, and reporting workflows using Python, SQL, REST APIs, and relational databases.",
@@ -50,6 +64,13 @@ const expertiseItems = [
       { name: "ETL/ELT Design", pct: 82 },
       { name: "API Integration", pct: 78 },
     ]
+  },
+  {
+    num: "06",
+    title: "Linux & Systems Programming",
+    icon: Terminal,
+    description: "POSIX system programming with processes, threads, synchronization, IPC, signals, and epoll/select, plus memory debugging, RTOS concepts, and embedded Linux toolchains.",
+    tags: ["POSIX", "pthreads", "IPC", "Memory Debugging", "RTOS", "Bash", "CMake", "Cross-Compilation"]
   }
 ]
 
@@ -150,7 +171,7 @@ export function CoreExpertiseSection() {
                   </div>
 
                   {/* Skill Bars */}
-                  <div
+                  {item.skills && <div
                     className="space-y-3 pt-4"
                     style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}
                   >
@@ -162,7 +183,7 @@ export function CoreExpertiseSection() {
                         visible={visible}
                       />
                     ))}
-                  </div>
+                  </div>}
 
                   {/* Tech pill tags */}
                   <div className="flex flex-wrap gap-1.5">

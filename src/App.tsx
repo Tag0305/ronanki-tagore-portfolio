@@ -5,6 +5,7 @@ import { AboutSection } from "./components/creator/AboutSection"
 import { ProjectsSection } from "./components/creator/ProjectsSection"
 import { CoreExpertiseSection } from "./components/creator/CoreExpertiseSection"
 import { TechStackSection } from "./components/creator/TechStackSection"
+import { SkillsGridSection } from "./components/creator/SkillsGridSection"
 import { ExperienceSection } from "./components/experience/ExperienceSection"
 import { Career } from "./components/portfolio3d/Career"
 import { Contact } from "./components/portfolio3d/Contact"
@@ -42,7 +43,10 @@ export default function App() {
         {/* 5. CORE EXPERTISE SECTION */}
         <CoreExpertiseSection />
 
-        {/* 6. TECH & DESIGN STACK SECTION */}
+        {/* 6. TECHNICAL SKILLS (from résumé) */}
+        <SkillsGridSection />
+
+        {/* 6b. TECH & DESIGN STACK SECTION */}
         <TechStackSection />
 
         {/* 7. PROFESSIONAL EXPERIENCE */}
@@ -80,7 +84,7 @@ export default function App() {
                 className="font-mono text-xs"
                 style={{ color: "#888" }}
               >
-                · Data Analyst &amp; AI Evaluation Developer
+                · Portfolio
               </span>
             </div>
             <span className="font-mono text-xs" style={{ color: "#888" }}>
